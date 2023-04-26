@@ -7,7 +7,7 @@ namespace Expressions.Implementations
         public LikeExpression(IExpression leftOperand, IExpression rightOperand)
             :base(ExpressionType.Bool, leftOperand, rightOperand)
         {   
-            EnsureTypeSupported(rightOperand, ExpressionType.String, $"LikeExpression right operand should support {Expression.String} type. Type supplied: {rightOperand.ResultType}");     
+            EnsureTypeSupported(rightOperand, ExpressionType.String, $"LikeExpression right operand should support {ExpressionType.String} type. Type supplied: {rightOperand.ResultType}");     
         }
 
         public override void Accept(IVisitor visitor)

@@ -7,7 +7,7 @@ namespace Expressions.Implementations
         public PositiveSignExpression(IExpression operand)
             :base(ExpressionType.Numeric, operand)
         {
-            EnsureTypeSupported(operand, ExpressionType.Numeric, $"PositiveSignExpression operand should support {Expression.Numeric } type. Type supplied: {operand.ResultType}");
+            EnsureTypeSupported(operand, ExpressionType.Numeric, $"PositiveSignExpression operand should support {ExpressionType.Numeric } type. Type supplied: {operand.ResultType}");
         }
 
         public override void Accept(IVisitor visitor)
