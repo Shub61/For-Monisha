@@ -59,5 +59,19 @@ namespace Expressions.AliasExpressions.Evaluators
             return evaluator;
         }
 
+        public void AddNameResolver(INameResolver nameResolver)
+        {
+            throw new NotImplementedException();
+        }
+
+        Expressions.Evaluators.IEvaluator IEvaluatorFactory.GetEvaluator(Type type, string expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        Expressions.Evaluators.IEvaluator IEvaluatorFactory.GetEvaluator(Type type, IExpression expression)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
