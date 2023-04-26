@@ -54,7 +54,7 @@ namespace Expressions.Parsers
                     }
                     else
                     {
-                        if(lastTokenType == TokenType.Operation && (kind == ExpressionKind.Add || kind == ExpressionKind.Substract))
+                        if(lastTokenType == TokenType.Operation && (kind == ExpressionKind.Add || kind == ExpressionKind.Subtract))
                         {
                             kind = kind == ExpressionKind.Add ? ExpressionKind.UnaryPlus : ExpressionKind.UnaryMinus; 
                             piece = _confguration.GetToken(kind.Value);
@@ -167,7 +167,7 @@ namespace Expressions.Parsers
                         .ToList();
         }
 
-        private Enum TokenType
+        private enum TokenType
         {
             Operation,
             Operand,

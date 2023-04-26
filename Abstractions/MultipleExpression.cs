@@ -1,12 +1,11 @@
 using Expressions.Helpers;
-using System.Collections.Generic;
 
 namespace Expressions.Abstractions
 {
     public abstract class MultipleExpression : Expression, IMultipleExpression
     {
-        protected MultipleExpression(ExpressionType type, param IExpression[] operands)
-        : this(type, IReadOnlyCollection < IExpression > operands) { }
+        protected MultipleExpression(ExpressionType type, IExpression[] operands)
+        : this(type, IReadOnlyCollection <IExpression> operands) { }
         
         protected MultipleExpression(ExpressionType type, IReadOnlyCollection<IExpression> operands) 
                         : base(type) 

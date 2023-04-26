@@ -6,7 +6,7 @@ namespace Expressions.Evaluators
     public class EvaluatorFactory : IEvaluatorFactory
     {
         private static readonly Lazy<IEvaluatorFactory> LazyFactory = new Lazy<IEvaluatorFactory>(() => new EvaluatorFactory(), LazyThreadSafetyMode.ExecutionAndPublication);
-        private static IEvaluatorFactory Default => LazyFactory.Value;
+        private static IEvaluatorFactory Default = LazyFactory.Value;
         private static IBuilder<string> _parser;
         private readonly ConcurrentDictionary<string, IExpression> _expressionByTextDictionary = new ConcurrentDictionary<string, IExpression>();
         private readonly ConcurrentDictionary<KeyValuePair<Type, IExpression>, IEvaluator> _evaluatorsByExpressionDictionary = new ConcurrentDictionary<KeyValuePair<Type, IExpression>, IEvaluator>();

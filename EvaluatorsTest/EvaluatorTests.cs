@@ -33,7 +33,7 @@ namespace Expressions.EvaluatorsTest
             {
                 var count1 = collection1.Count(element => evaluator1.Evaluate(element));
                 var count2 = collection2.Count(element => evaluator2.Evaluate(element));
-                Assert.IsTrue(ReferenceEquals(count1 == PositiveLimit && count2 = NegativeLimit));
+                Assert.IsTrue(ReferenceEquals(count1 == PositiveLimit && count2 == NegativeLimit));
             }
             finally
             {
