@@ -85,7 +85,7 @@ namespace Expressions.Parsers
                             case ExpressionKind.Or:
                                 expression = Expression.Or(x, y);
                                 break;
-                            case ExpressionKind.Substract:
+                            case ExpressionKind.Subtract:
                                 expression = Expression.Subtract(x, y);
                                 break;
                             case ExpressionKind.Like:

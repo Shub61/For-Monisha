@@ -85,9 +85,9 @@ namespace Expressions
         {
             return new AddExpression(leftOperand, rightOperand);
         }
-        public static Expression Substract(IExpression leftOperand, IExpression rightOperand)
+        public static Expression Subtract(IExpression leftOperand, IExpression rightOperand)
         {
-            return new SubstractExpression(leftOperand, rightOperand);
+            return new SubtractExpression(leftOperand, rightOperand);
         }        
         public static Expression Divide(IExpression leftOperand, IExpression rightOperand)
         {
